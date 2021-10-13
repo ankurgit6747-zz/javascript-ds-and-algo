@@ -1,11 +1,23 @@
-console.log('repeat string');
+console.log("repeat string");
 
+
+// sollution 1
 function repeatStringNumTimes(str, num) {
-    for(i=0 ; i<num ; num++){
-        newString = str+num[1]
-    }
-    console.log(newString);
-    return str;
+  var newStr = ''
+  while(num>0){
+      newStr += str,
+      num--
   }
-  
-  repeatStringNumTimes("abc", 3);
+  return newStr
+//   console.log(newStr);
+}
+
+repeatStringNumTimes("abc", 3);
+  console.log( repeatStringNumTimes("abc", 3));
+
+// sollution 2
+// function repeatStringNumTimes(str, num) {
+//     return num > 0 ? str + repeatStringNumTimes(str, num - 1) : '';
+//   }
+
+//   console.log(repeatStringNumTimes('ankur', 4));
